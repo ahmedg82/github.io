@@ -108,3 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 });
+
+// CV Download Function - Opens CV page and triggers print dialog for PDF save
+function downloadCV() {
+	// Open cv.html in a new window
+	const cvWindow = window.open('cv.html', '_blank');
+	
+	// Wait for the page to load, then trigger print dialog
+	if (cvWindow) {
+		cvWindow.addEventListener('load', function() {
+			setTimeout(() => {
+				cvWindow.print();
+			}, 500);
+		});
+	}
+}
