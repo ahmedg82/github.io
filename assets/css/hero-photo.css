@@ -22,6 +22,7 @@
     height: 483px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 20%;
     box-shadow: 0 20px 60px rgba(168, 85, 247, 0.4), 0 0 80px rgba(236, 72, 153, 0.3);
     border: 4px solid transparent;
     background: linear-gradient(#0a0118, #0a0118) padding-box,
