@@ -18,8 +18,8 @@
 }
 
 .hero-photo {
-    width: 350px;
-    height: 350px;
+    width: 483px;
+    height: 483px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 20px 60px rgba(168, 85, 247, 0.4), 0 0 80px rgba(236, 72, 153, 0.3);
@@ -60,14 +60,14 @@
     }
 
     .hero-photo {
-        width: 300px;
-        height: 300px;
+        width: 414px;
+        height: 414px;
     }
 }
 
 @media (max-width: 768px) {
     .hero-photo {
-        width: 250px;
-        height: 250px;
+        width: 345px;
+        height: 345px;
     }
 }
