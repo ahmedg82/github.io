@@ -55,18 +55,31 @@ document.addEventListener('DOMContentLoaded', () => {
 	const contactForm = document.getElementById('contact-form');
 	const formMessages = document.getElementById('form-messages');
 
+	function showFormMessage(type, message) {
+		if (!formMessages) {
+			return;
+		}
+
+		formMessages.className = `form-messages is-visible is-${type}`;
+		formMessages.innerHTML = message;
+	}
+
 	if (contactForm) {
 		contactForm.addEventListener('submit', async (e) => {
 			e.preventDefault();
 
 			// Get form data
 			const formData = new FormData(contactForm);
+			if (formData.get('_gotcha')) {
+				return;
+			}
 
 			// Show loading state
 			const submitButton = contactForm.querySelector('button[type="submit"]');
 			const originalButtonText = submitButton.innerHTML;
 			submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 			submitButton.disabled = true;
+			showFormMessage('success', '<i class="fas fa-spinner fa-spin"></i> Sending your message...');
 
 			try {
 				// Submit form to Formspree
@@ -80,13 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				if (response.ok) {
 					// Success
-					formMessages.style.display = 'block';
-					formMessages.style.padding = '1rem';
-					formMessages.style.borderRadius = '8px';
-					formMessages.style.backgroundColor = 'rgba(34, 197, 94, 0.1)';
-					formMessages.style.border = '1px solid rgba(34, 197, 94, 0.3)';
-					formMessages.style.color = '#22c55e';
-					formMessages.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
+					showFormMessage('success', '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
 					
 					// Reset form
 					contactForm.reset();
@@ -96,13 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				}
 			} catch (error) {
 				// Error
-				formMessages.style.display = 'block';
-				formMessages.style.padding = '1rem';
-				formMessages.style.borderRadius = '8px';
-				formMessages.style.backgroundColor = 'rgba(239, 68, 68, 0.1)';
-				formMessages.style.border = '1px solid rgba(239, 68, 68, 0.3)';
-				formMessages.style.color = '#ef4444';
-				formMessages.innerHTML = '<i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or email me directly at ahmedg1982@gmail.com.';
+				showFormMessage('error', '<i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or email me directly at ahmedg82@outlook.com.');
 			} finally {
 				// Restore button
 				submitButton.innerHTML = originalButtonText;
@@ -110,7 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				// Hide message after 5 seconds
 				setTimeout(() => {
-					formMessages.style.display = 'none';
+					if (formMessages) {
+						formMessages.className = 'form-messages';
+						formMessages.innerHTML = '';
+					}
 				}, 5000);
 			}
 		});

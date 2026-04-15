@@ -572,25 +572,27 @@
 					<form class="contact-form" action="https://formspree.io/f/xanyqepo" method="POST" id="contact-form">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input type="text" id="name" name="name" required>
+							<input type="text" id="name" name="name" autocomplete="name" required>
 						</div>
 
 						<!-- Formspree configuration -->
 						<input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+						<input type="hidden" name="_captcha" value="false">
+						<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
 
 						<div class="form-group">
 							<label for="email">Email</label>
-							<input type="email" id="email" name="email" required>
+							<input type="email" id="email" name="email" autocomplete="email" required>
 						</div>
 
 						<div class="form-group">
 							<label for="subject">Subject</label>
-							<input type="text" id="subject" name="subject" required>
+							<input type="text" id="subject" name="subject" autocomplete="organization-title" required>
 						</div>
 
 						<div class="form-group">
 							<label for="message">Message</label>
-							<textarea id="message" name="message" rows="5" required></textarea>
+							<textarea id="message" name="message" rows="5" autocomplete="off" required></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-primary">
@@ -598,7 +600,8 @@
 						</button>
 
 						<!-- Success/Error Messages -->
-						<div id="form-messages" style="margin-top: 1rem; display: none;"></div>
+						<p class="form-note">Messages are sent directly to my inbox. You can also reach me at <a href="mailto:ahmedg82@outlook.com">ahmedg82@outlook.com</a>.</p>
+						<div id="form-messages" class="form-messages" aria-live="polite"></div>
 					</form>
 				</div>
 			</div>
