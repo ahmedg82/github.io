@@ -64,9 +64,38 @@ document.addEventListener('DOMContentLoaded', () => {
 		formMessages.innerHTML = message;
 	}
 
+	function normalizeFormFields(form) {
+		const fields = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+
+		fields.forEach((field) => {
+			const cleanedValue = field.type === 'email'
+				? field.value.replace(/\s+/g, '')
+				: field.value.trim();
+			field.value = cleanedValue;
+		});
+	}
+
 	if (contactForm) {
+		const emailInput = contactForm.querySelector('#email');
+
+		if (emailInput) {
+			emailInput.addEventListener('input', () => {
+				emailInput.value = emailInput.value.replace(/\s+/g, '');
+			});
+
+			emailInput.addEventListener('blur', () => {
+				emailInput.value = emailInput.value.trim();
+			});
+		}
+
 		contactForm.addEventListener('submit', async (e) => {
 			e.preventDefault();
+
+			normalizeFormFields(contactForm);
+
+			if (!contactForm.reportValidity()) {
+				return;
+			}
 
 			// Get form data
 			const formData = new FormData(contactForm);
