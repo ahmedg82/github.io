@@ -7,6 +7,8 @@
 	<title>Ahmed Gomaa | Data Analyst & Business Intelligence Specialist</title>
 	<meta name="description"
 		content="Data Analyst specializing in SQL, Power BI, SAP, and Business Intelligence. Transforming complex data into actionable insights.">
+	<meta name="theme-color" content="#0a0118">
+	<link rel="preload" as="image" href="images/ahmed-hero-main.jpg">
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +18,7 @@
 		rel="stylesheet">
 
 	<!-- Icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -66,6 +68,9 @@
 						<a href="#projects" class="btn btn-primary">
 							<i class="fas fa-briefcase"></i> View Portfolio
 						</a>
+						<a href="#contact" class="btn btn-secondary">
+							<i class="fas fa-handshake"></i> Book a Consultation
+						</a>
 						<a href="#" onclick="downloadCV(); return false;" class="btn btn-outline">
 							<i class="fas fa-download"></i> Download CV
 						</a>
@@ -85,10 +90,26 @@
 							<span class="stat-label">Technologies</span>
 						</div>
 					</div>
+
+					<div class="trust-strip fades-in delay-3">
+						<div class="trust-item">
+							<span class="trust-label">Certified</span>
+							<strong>PL-300 + Google DA</strong>
+						</div>
+						<div class="trust-item">
+							<span class="trust-label">Industry Focus</span>
+							<strong>Manufacturing & Sales Analytics</strong>
+						</div>
+						<div class="trust-item">
+							<span class="trust-label">Recent Impact</span>
+							<strong>40% reporting efficiency gain</strong>
+						</div>
+					</div>
 				</div>
 
 				<div class="hero-image fades-in delay-2">
-					<img src="images/ahmed-hero-main.jpg" alt="Ahmed Gomaa - Data Analyst" class="hero-photo">
+					<img src="images/ahmed-hero-main.jpg" alt="Ahmed Gomaa - Data Analyst" class="hero-photo"
+						fetchpriority="high" decoding="async">
 					<div class="hero-decoration"></div>
 				</div>
 			</div>
@@ -232,11 +253,12 @@
 
 			<div class="projects-grid">
 				<!-- Project 1 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"Exercise Analysis Dashboard","summary":"End-to-end fitness tracking dashboard with pattern recognition and goal-setting features using Power BI and DAX.","challenge":"Bring together workout, progress, and adherence data into one reporting layer that makes trends easy to spot for coaches and users.","solution":"Modeled workout metrics in Power BI, created DAX measures for progress tracking, and designed an interactive dashboard for weekly and monthly performance reviews.","outcome":"Created a cleaner decision view for goal tracking and faster insight generation from fitness data.","tools":["Power BI","DAX","Data Modeling"],"link":"https://github.com/ahmedg82/Exercise-Analysis.git"}'>
 					<div class="project-image">
-						<img src="images/pic01.jpg" alt="Exercise Analysis Dashboard">
+						<img src="images/pic01.jpg" alt="Exercise Analysis Dashboard" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://github.com/ahmedg82/Exercise-Analysis.git" target="_blank"
+							<a href="https://github.com/ahmedg82/Exercise-Analysis.git" target="_blank" rel="noopener noreferrer"
 								class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
@@ -251,15 +273,17 @@
 							<span class="tag">#DAX</span>
 							<span class="tag">#Analytics</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 
 				<!-- Project 2 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"COVID-19 Data Exploration","summary":"Global pandemic trend analysis using advanced SQL queries for exploratory data analysis and insights extraction.","challenge":"Explore a rapidly changing public dataset and surface reliable trend signals from large volumes of regional and time-series records.","solution":"Built a structured SQL exploration workflow covering cases, deaths, and vaccination trends to answer analytical questions quickly and consistently.","outcome":"Delivered a reusable SQL analysis foundation for comparing geographies and identifying major trend shifts.","tools":["SQL","EDA","Data Analysis"],"link":"https://github.com/ahmedg82/Covid_19_SQL/blob/master/Covid_19.sql"}'>
 					<div class="project-image">
-						<img src="images/pic02.jpg" alt="COVID-19 Data Exploration">
+						<img src="images/pic02.jpg" alt="COVID-19 Data Exploration" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://github.com/ahmedg82/Covid_19_SQL/blob/master/Covid_19.sql" target="_blank"
+							<a href="https://github.com/ahmedg82/Covid_19_SQL/blob/master/Covid_19.sql" target="_blank" rel="noopener noreferrer"
 								class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
@@ -274,15 +298,17 @@
 							<span class="tag">#EDA</span>
 							<span class="tag">#DataAnalysis</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 
 				<!-- Project 3 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"Paint & Chemical Industry Solutions","summary":"Specialized analytics solutions for paint and chemical manufacturing, including inventory optimization and production analytics.","challenge":"Support operational and commercial decisions in a complex manufacturing environment with fragmented reporting and industry-specific KPIs.","solution":"Designed analytics views around inventory, production, and commercial performance to help stakeholders monitor operational bottlenecks and sales trends.","outcome":"Improved visibility into manufacturing performance and helped align reporting with business priorities.","tools":["Industry Analytics","Visualization","Business Intelligence"],"link":"https://public.tableau.com/app/profile/ahmed.gomaa"}'>
 					<div class="project-image">
-						<img src="images/pic03.jpg" alt="Paint & Chemical Industry Solutions">
+						<img src="images/pic03.jpg" alt="Paint & Chemical Industry Solutions" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://public.tableau.com/app/profile/ahmed.gomaa" target="_blank"
+							<a href="https://public.tableau.com/app/profile/ahmed.gomaa" target="_blank" rel="noopener noreferrer"
 								class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
@@ -297,15 +323,17 @@
 							<span class="tag">#Visualization</span>
 							<span class="tag">#BI</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 
 				<!-- Project 4 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"Nashville Housing Data Cleaning","summary":"Comprehensive data cleaning and standardization project for housing market analysis and price modeling.","challenge":"Prepare messy housing records for analysis by fixing inconsistent formats, duplicate values, and incomplete location fields.","solution":"Used SQL cleaning routines to standardize dates, split fields, normalize addresses, and remove duplicates so the dataset could support downstream analysis.","outcome":"Turned raw housing data into a trustworthy analysis-ready dataset for reporting and modeling.","tools":["ETL","SQL","Data Cleaning"],"link":"https://github.com/ahmedg82/Nashville_Housing"}'>
 					<div class="project-image">
-						<img src="images/pic04.jpg" alt="Nashville Housing Data Cleaning">
+						<img src="images/pic04.jpg" alt="Nashville Housing Data Cleaning" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://github.com/ahmedg82/Nashville_Housing" target="_blank"
+							<a href="https://github.com/ahmedg82/Nashville_Housing" target="_blank" rel="noopener noreferrer"
 								class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
@@ -320,15 +348,17 @@
 							<span class="tag">#SQL</span>
 							<span class="tag">#DataCleaning</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 
 				<!-- Project 5 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"Amazon Price Scraper","summary":"Automated product data extraction bot for price monitoring using Python and BeautifulSoup.","challenge":"Monitor product pricing without relying on manual checks, while keeping the collection workflow lightweight and repeatable.","solution":"Built a Python scraper to collect product data and price changes, creating a simple automation path for recurring monitoring.","outcome":"Reduced manual price checking and created a reusable data collection workflow for product tracking.","tools":["Python","Web Scraping","Automation"],"link":"https://github.com/ahmedg82/Amazon"}'>
 					<div class="project-image">
-						<img src="images/pic05.jpg" alt="Amazon Price Scraper">
+						<img src="images/pic05.jpg" alt="Amazon Price Scraper" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://github.com/ahmedg82/Amazon" target="_blank" class="project-link">
+							<a href="https://github.com/ahmedg82/Amazon" target="_blank" rel="noopener noreferrer" class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
 						</div>
@@ -342,15 +372,17 @@
 							<span class="tag">#WebScraping</span>
 							<span class="tag">#Automation</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 
 				<!-- Project 6 -->
-				<article class="project-card glass">
+				<article class="project-card glass"
+					data-case-study='{"title":"Movie Correlation Study","summary":"Statistical analysis of movie budget vs gross revenue using Pandas, Seaborn, and correlation techniques.","challenge":"Identify the variables most strongly associated with movie revenue and make the results easy to interpret visually.","solution":"Used Python analysis libraries to clean the dataset, explore distributions, and visualize correlation patterns across budget and revenue fields.","outcome":"Produced an approachable statistical study showing which attributes were most useful for revenue analysis.","tools":["Pandas","Seaborn","Statistics"],"link":"https://github.com/ahmedg82/Movies"}'>
 					<div class="project-image">
-						<img src="images/pic06.jpg" alt="Movie Correlation Study">
+						<img src="images/pic06.jpg" alt="Movie Correlation Study" loading="lazy" decoding="async">
 						<div class="project-overlay">
-							<a href="https://github.com/ahmedg82/Movies" target="_blank" class="project-link">
+							<a href="https://github.com/ahmedg82/Movies" target="_blank" rel="noopener noreferrer" class="project-link">
 								<i class="fas fa-external-link-alt"></i>
 							</a>
 						</div>
@@ -364,6 +396,7 @@
 							<span class="tag">#Seaborn</span>
 							<span class="tag">#Statistics</span>
 						</div>
+						<button class="case-study-btn" type="button">View Case Study</button>
 					</div>
 				</article>
 			</div>
@@ -473,11 +506,22 @@
 				<h2 class="section-title">Let's Work Together</h2>
 			</div>
 
+			<div class="engagement-banner glass">
+				<div>
+					<p class="mono-text">HOW I CAN HELP</p>
+					<h3>Available for dashboard projects, reporting automation, and business analysis support.</h3>
+				</div>
+				<div class="engagement-points">
+					<span>Power BI dashboard design</span>
+					<span>SQL reporting and data modeling</span>
+					<span>SAP and sales analytics alignment</span>
+				</div>
+			</div>
+
 			<div class="contact-grid">
 				<div class="contact-info glass">
 					<h3>Get In Touch</h3>
-					<p>I'm always interested in discussing data analytics opportunities, collaborations, or just
-						connecting with fellow data enthusiasts.</p>
+					<p>I'm always interested in discussing analytics opportunities, dashboard revamps, and reporting automation work. If you need cleaner data stories and faster decision support, let's talk.</p>
 
 					<div class="contact-methods">
 						<a href="mailto:ahmedg82@outlook.com" class="contact-method">
@@ -496,7 +540,7 @@
 							</div>
 						</a>
 
-						<a href="https://www.linkedin.com/in/ahmed-gomaa-2a105936/" target="_blank"
+						<a href="https://www.linkedin.com/in/ahmed-gomaa-2a105936/" target="_blank" rel="noopener noreferrer"
 							class="contact-method">
 							<i class="fab fa-linkedin"></i>
 							<div>
@@ -505,7 +549,7 @@
 							</div>
 						</a>
 
-						<a href="https://github.com/ahmedg82" target="_blank" class="contact-method">
+						<a href="https://github.com/ahmedg82" target="_blank" rel="noopener noreferrer" class="contact-method">
 							<i class="fab fa-github"></i>
 							<div>
 								<strong>GitHub</strong>
@@ -583,11 +627,11 @@
 				<div class="footer-social">
 					<h4>Connect</h4>
 					<div class="social-links">
-						<a href="https://www.linkedin.com/in/ahmed-gomaa-2a105936/" target="_blank"
+						<a href="https://www.linkedin.com/in/ahmed-gomaa-2a105936/" target="_blank" rel="noopener noreferrer"
 							aria-label="LinkedIn">
 							<i class="fab fa-linkedin"></i>
 						</a>
-						<a href="https://github.com/ahmedg82" target="_blank" aria-label="GitHub">
+						<a href="https://github.com/ahmedg82" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 							<i class="fab fa-github"></i>
 						</a>
 						<a href="mailto:ahmedg82@outlook.com" aria-label="Email">
@@ -600,12 +644,43 @@
 			<div class="footer-bottom">
 				<p class="mono-text">© 2026 Ahmed Gomaa. All rights reserved. | "Without data, you're just another
 					person with an opinion."</p>
+				<p class="mono-text footer-copyright">&copy; 2026 Ahmed Gomaa. All rights reserved. | "Without data, you're just another person with an opinion."</p>
 			</div>
 		</div>
 	</footer>
 
+	<div class="case-study-modal" id="case-study-modal" aria-hidden="true">
+		<div class="case-study-backdrop" data-close-modal></div>
+		<div class="case-study-dialog glass" role="dialog" aria-modal="true" aria-labelledby="case-study-title">
+			<button class="case-study-close" type="button" aria-label="Close case study" data-close-modal>
+				<i class="fas fa-times"></i>
+			</button>
+			<p class="mono-text">PROJECT BREAKDOWN</p>
+			<h3 id="case-study-title">Case Study</h3>
+			<p class="case-study-summary" id="case-study-summary"></p>
+			<div class="case-study-sections">
+				<div class="case-study-section">
+					<h4>Challenge</h4>
+					<p id="case-study-challenge"></p>
+				</div>
+				<div class="case-study-section">
+					<h4>Approach</h4>
+					<p id="case-study-solution"></p>
+				</div>
+				<div class="case-study-section">
+					<h4>Outcome</h4>
+					<p id="case-study-outcome"></p>
+				</div>
+			</div>
+			<div class="case-study-tools" id="case-study-tools"></div>
+			<a class="btn btn-primary case-study-link" id="case-study-link" href="#" target="_blank" rel="noopener noreferrer">
+				<i class="fas fa-external-link-alt"></i> Open Project
+			</a>
+		</div>
+	</div>
+
 	<!-- Scripts -->
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js" defer></script>
 </body>
 
 </html>

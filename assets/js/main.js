@@ -9,6 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	if (navLinks) {
+		navLinks.querySelectorAll('a').forEach((link) => {
+			link.addEventListener('click', () => {
+				navLinks.classList.remove('active');
+			});
+		});
+	}
+
 	// Typewriter Effect Logic (Optional enhancement)
 	const typeWriterElement = document.querySelector('.type-writer');
 	if (typeWriterElement) {
@@ -104,6 +112,78 @@ document.addEventListener('DOMContentLoaded', () => {
 				setTimeout(() => {
 					formMessages.style.display = 'none';
 				}, 5000);
+			}
+		});
+	}
+
+	const caseStudyModal = document.getElementById('case-study-modal');
+	const caseStudyButtons = document.querySelectorAll('.case-study-btn');
+	const modalTitle = document.getElementById('case-study-title');
+	const modalSummary = document.getElementById('case-study-summary');
+	const modalChallenge = document.getElementById('case-study-challenge');
+	const modalSolution = document.getElementById('case-study-solution');
+	const modalOutcome = document.getElementById('case-study-outcome');
+	const modalTools = document.getElementById('case-study-tools');
+	const modalLink = document.getElementById('case-study-link');
+	let lastTrigger = null;
+
+	function closeCaseStudy() {
+		if (!caseStudyModal) {
+			return;
+		}
+
+		caseStudyModal.classList.remove('is-open');
+		caseStudyModal.setAttribute('aria-hidden', 'true');
+		document.body.style.overflow = '';
+
+		if (lastTrigger) {
+			lastTrigger.focus();
+		}
+	}
+
+	function openCaseStudy(projectData, trigger) {
+		if (!caseStudyModal) {
+			return;
+		}
+
+		lastTrigger = trigger;
+		modalTitle.textContent = projectData.title;
+		modalSummary.textContent = projectData.summary;
+		modalChallenge.textContent = projectData.challenge;
+		modalSolution.textContent = projectData.solution;
+		modalOutcome.textContent = projectData.outcome;
+		modalLink.href = projectData.link;
+		modalTools.innerHTML = '';
+
+		projectData.tools.forEach((tool) => {
+			const tag = document.createElement('span');
+			tag.className = 'tag';
+			tag.textContent = `#${tool.replace(/\s+/g, '')}`;
+			modalTools.appendChild(tag);
+		});
+
+		caseStudyModal.classList.add('is-open');
+		caseStudyModal.setAttribute('aria-hidden', 'false');
+		document.body.style.overflow = 'hidden';
+		caseStudyModal.querySelector('.case-study-close').focus();
+	}
+
+	caseStudyButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const card = button.closest('.project-card');
+			const projectData = JSON.parse(card.dataset.caseStudy);
+			openCaseStudy(projectData, button);
+		});
+	});
+
+	if (caseStudyModal) {
+		caseStudyModal.querySelectorAll('[data-close-modal]').forEach((element) => {
+			element.addEventListener('click', closeCaseStudy);
+		});
+
+		document.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape' && caseStudyModal.classList.contains('is-open')) {
+				closeCaseStudy();
 			}
 		});
 	}
