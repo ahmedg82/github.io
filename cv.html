@@ -1,222 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Gomaa - CV | Data Analyst</title>
-    <meta name="description"
-        content="Professional CV of Ahmed Gomaa - Data Analyst specializing in SQL, Power BI, and Business Intelligence">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Gomaa — CV | Senior BI &amp; Sales Analytics Specialist</title>
+  <meta name="description" content="CV of Ahmed Gomaa — Senior BI &amp; Sales Analytics Specialist. Power BI, SQL Server, SAP SD, and Excel expert. Microsoft PL-300 Certified. Riyadh, Saudi Arabia." />
 
-    <!-- Fonts: Inter for UI, Fira Code for Data/Tech -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/cv.css">
+  <!-- CV Styles (standalone — does not depend on main style.css) -->
+  <link rel="stylesheet" href="assets/css/cv.css" />
 </head>
 
 <body>
 
-    <div class="background-grid"></div>
+<!-- ── Top navigation bar ── -->
+<div class="cv-topbar">
+  <a href="index.html" class="cv-topbar-brand">
+    <i class="fas fa-chart-line"></i> Ahmed Gomaa
+  </a>
+  <div class="cv-topbar-actions">
+    <a href="index.html#portfolio" class="cv-btn cv-btn-outline">
+      <i class="fas fa-th-large"></i> Projects
+    </a>
+    <button class="cv-btn cv-btn-primary" onclick="downloadCV()" id="downloadBtn">
+      <i class="fas fa-download"></i> Download PDF
+    </button>
+  </div>
+</div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo"><i class="fas fa-chart-line"></i> Ahmed Gomaa</a>
-            <ul class="nav-links">
-                <li><a href="index.html#hero">Overview</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#stack">Tech Stack</a></li>
-                <li><a href="index.html#projects">Work</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
-                <li><a href="index.html#contact">Connect</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+<!-- ── Main page wrapper ── -->
+<div class="cv-page">
+<article class="cv-doc" id="cvDocument">
+
+  <!-- ══════════════════════════════════════════
+       HEADER
+       ══════════════════════════════════════════ -->
+  <header class="cv-header">
+    <div class="cv-header-grid">
+
+      <!-- Photo -->
+      <div class="cv-photo-wrap">
+        <!--
+          TO ADD YOUR LINKEDIN PHOTO:
+          1. Go to linkedin.com/in/ahmed-gomaa-2a105936
+          2. Click your profile photo → "View profile picture"
+          3. Right-click the full image → Save As → "ahmed-linkedin.jpg"
+          4. Place it in the images/ folder
+          5. Replace the placeholder icon below with:
+             <img src="images/ahmed-linkedin.jpg" alt="Ahmed Gomaa" />
+        -->
+        <img
+          src="images/ahmed-professional-new.jpg"
+          alt="Ahmed Gomaa — Senior BI &amp; Sales Analytics Specialist"
+          id="profilePhoto"
+        />
+      </div>
+
+      <!-- Name + title -->
+      <div class="cv-name-block">
+        <div class="cv-role-tag">Senior BI &amp; Sales Analytics Specialist</div>
+        <h1 class="cv-full-name">Ahmed Gomaa</h1>
+        <p class="cv-headline">
+          Power BI · SQL Server · SAP SD &amp; CX · Excel &amp; Power Query<br />
+          Microsoft PL-300 Certified · Google Data Analytics Certified
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div class="cv-contact-col">
+        <div class="cv-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ahmedg82@outlook.com">ahmedg82@outlook.com</a>
         </div>
-    </nav>
-
-    <!-- CV Hero Section -->
-    <header class="cv-hero">
-        <div class="container">
-            <div class="cv-header-content fades-in">
-                <div class="cv-profile-header">
-                    <div class="cv-name-section">
-                        <p class="cv-role-label">Data Analyst | Business Analyst</p>
-                        <h1>AHMED GOMAA</h1>
-                    </div>
-                    <div class="cv-contact-info">
-                        <p>0591807445 | ahmedg82@outlook.com</p>
-                        <p>https://www.linkedin.com/in/ahmed-gomaa-2a105936</p>
-                        <p>https://ahmedg82.github.io</p>
-                        <p>Riyadh, KSA</p>
-                    </div>
-                </div>
-            </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+966591807445">+966 591 807 445</a>
         </div>
-    </header>
-
-    <!-- Skills Section -->
-    <section class="cv-section">
-        <div class="container">
-            <div class="cv-section-header">
-                <h2>Skills</h2>
-            </div>
-            <div class="glass cv-card">
-                <div class="skills-simple-grid">
-                    <div class="skill-column">
-                        <h3>Excel</h3>
-                        <p>Tools: Pivot Table, Pivot Chart, VLOOKUP, XLOOKUP, Power Query</p>
-
-                        <h3>Power BI</h3>
-                        <p>Tools: DAX, Power Query</p>
-                    </div>
-                    <div class="skill-column">
-                        <h3>SQL</h3>
-                        <p>SQL server</p>
-
-                        <h3>SAP</h3>
-                        <p>SD – CX – SAC</p>
-                    </div>
-                </div>
-            </div>
+        <div class="cv-contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/ahmed-gomaa-2a105936" target="_blank" rel="noopener">
+            linkedin.com/in/ahmed-gomaa-2a105936
+          </a>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="cv-section">
-        <div class="container">
-            <div class="cv-section-header">
-                <h2>Projects</h2>
-            </div>
-            <div class="cv-projects-list">
-                <!-- Project 1 -->
-                <div class="cv-project-item">
-                    <h3>CUSTOMER SALES ANALYSIS</h3>
-                    <ul>
-                        <li>Sales performance metrics: This includes metrics such as total sales, revenue, profit, and
-                            average order value.</li>
-                        <li>Sales team performance</li>
-                        <li>Goal tracking</li>
-                        <li>Sales by product category</li>
-                    </ul>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="cv-project-item">
-                    <h3>RETAIL ANALYSIS</h3>
-                    <ul>
-                        <li>Customer segmentation: based on demographics, purchasing behavior, and other factors to help
-                            identify high-value customers and opportunities for growth.</li>
-                        <li>Inventory management: provide insights into inventory levels, including the number of units
-                            in stock, product turnover rate, and out-of-stock items.</li>
-                        <li>Goal tracking</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="cv-contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/ahmedg82" target="_blank" rel="noopener">
+            github.com/ahmedg82
+          </a>
         </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section class="cv-section">
-        <div class="container">
-            <div class="cv-section-header">
-                <h2>Work Experience</h2>
-            </div>
-            <div class="cv-experience-list">
-                <!-- Experience 1 -->
-                <div class="cv-experience-item">
-                    <div class="cv-experience-header">
-                        <h3>JAZEERA PAINTS – SALES ANALYST SECTION HEAD</h3>
-                        <span class="cv-experience-date">2021 – Till now</span>
-                    </div>
-                    <ul>
-                        <li>Train, develop and supervise sales analytics team.</li>
-                        <li>Lead cross-functional projects using advanced data modeling and analysis techniques to
-                            discover insights that will guide strategic decisions and uncover optimization
-                            opportunities.</li>
-                        <li>Build, develop, and maintain data models, reporting systems, data automation systems,
-                            dashboards and performance metrics support that support key business decisions.</li>
-                        <li>Communicate results and business impacts of insight initiatives to stakeholders.</li>
-                    </ul>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="cv-experience-item">
-                    <div class="cv-experience-header">
-                        <h3>JAZEERA PAINTS – SALES ANALYST</h3>
-                        <span class="cv-experience-date">2015 - 2020</span>
-                    </div>
-                    <ul>
-                        <li>Compile and analyze data over time to forecast sales trends.</li>
-                        <li>Review past sales data to determine trends in productivity.</li>
-                        <li>Prepare accurate reports using data from internal and external sources.</li>
-                        <li>Present actionable information and insights to team members and management</li>
-                        <li>Gather and analyze data to understand problems and address them proactively.</li>
-                    </ul>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="cv-experience-item">
-                    <div class="cv-experience-header">
-                        <h3>JAZEERA PAINTS – PROJECT COORDINATOR</h3>
-                        <span class="cv-experience-date">2010 - 2015</span>
-                    </div>
-                </div>
-            </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://ahmedg82.github.io" target="_blank" rel="noopener">
+            ahmedg82.github.io
+          </a>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="cv-section">
-        <div class="container">
-            <div class="cv-section-header">
-                <h2>Certifications</h2>
-            </div>
-            <div class="cv-certifications-grid">
-                <div class="cv-cert-item">
-                    <h3>MICROSOFT CERTIFIED: POWER BI DATA ANALYST ASSOCIATE</h3>
-                    <p>PL-300 – MICROSOFT</p>
-                </div>
-                <div class="cv-cert-item">
-                    <h3>GOOGLE DATA ANALYTICS</h3>
-                    <p>DATA ANALYSIS TRACK – UDACITY</p>
-                </div>
-            </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Riyadh, Saudi Arabia · Open to Remote</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Education Section -->
-    <section class="cv-section">
-        <div class="container">
-            <div class="cv-section-header">
-                <h2>Education</h2>
-            </div>
-            <div class="cv-education-item">
-                <h3>FACULTY OF SCIENCE - ALEXANDRIA UNIVERSITY</h3>
-            </div>
+    </div>
+  </header>
+
+  <!-- ── Professional Summary ── -->
+  <div class="cv-summary-bar">
+    <p class="cv-summary-text">
+      Senior BI &amp; Sales Analytics Specialist with 15+ years at Jazeera Paints, the last 5+ years
+      leading the commercial analytics function. I design and deploy Power BI dashboards, automate
+      SQL-based reporting pipelines, and integrate SAP SD and CX data into actionable intelligence
+      that supports executive decisions. My work has eliminated 60+ hours of manual effort per month,
+      improved reporting speed by 40%, and delivered 15+ production dashboards used daily by
+      management, regional teams, and C-suite stakeholders.
+      Microsoft PL-300 certified with hands-on Python and data engineering skills.
+    </p>
+  </div>
+
+  <!-- ── KPI Strip ── -->
+  <div class="cv-kpi-strip">
+    <div class="cv-kpi-item">
+      <div class="cv-kpi-num">15+</div>
+      <div class="cv-kpi-lbl">Power BI Dashboards</div>
+    </div>
+    <div class="cv-kpi-item">
+      <div class="cv-kpi-num">60h</div>
+      <div class="cv-kpi-lbl">Monthly Effort Saved</div>
+    </div>
+    <div class="cv-kpi-item">
+      <div class="cv-kpi-num">40%</div>
+      <div class="cv-kpi-lbl">Reporting Efficiency Gain</div>
+    </div>
+    <div class="cv-kpi-item">
+      <div class="cv-kpi-num">20+</div>
+      <div class="cv-kpi-lbl">Stakeholders Trained</div>
+    </div>
+    <div class="cv-kpi-item">
+      <div class="cv-kpi-num">5+</div>
+      <div class="cv-kpi-lbl">Years Analytics Leadership</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       TWO-COLUMN BODY
+       ══════════════════════════════════════════ -->
+  <div class="cv-body">
+
+    <!-- ── MAIN COLUMN ── -->
+    <main class="cv-main">
+
+      <!-- WORK EXPERIENCE ─────────────────── -->
+      <h2 class="cv-sec-title">Work Experience</h2>
+
+      <div class="cv-exp-list">
+
+        <!-- Role 1 -->
+        <div class="cv-exp-item">
+          <div class="cv-exp-top">
+            <div class="cv-exp-role">Sales Analytics Section Head</div>
+            <div class="cv-exp-period">2021 – Present</div>
+          </div>
+          <div class="cv-exp-company">
+            Jazeera Paints <span>· Riyadh, Saudi Arabia · Paints / Manufacturing / FMCG</span>
+          </div>
+          <ul class="cv-exp-bullets">
+            <li>
+              Architected and deployed <strong>15+ Power BI dashboards</strong> covering sales performance,
+              agent scorecards, regional heatmaps, pricing analysis, and executive KPI reporting —
+              used daily by regional managers and C-suite.
+            </li>
+            <li>
+              Engineered automated SQL Server + Power Query pipelines that eliminated
+              <strong>60+ hours of manual reporting work per month</strong>, replacing ad-hoc Excel
+              extracts with scheduled, validated data flows.
+            </li>
+            <li>
+              Designed SAP SD and SAP CX integration flows connecting ERP transaction data directly
+              to Power BI analytics — reducing data latency from days to hours.
+            </li>
+            <li>
+              Defined and enforced <strong>analytics governance standards</strong>: KPI definitions,
+              data quality rules, naming conventions, and a master data framework for the commercial division.
+            </li>
+            <li>
+              Implemented <strong>row-level security (RLS)</strong> across dashboards, enabling
+              self-service access for 20+ managers while maintaining data confidentiality per region.
+            </li>
+            <li>
+              Mentored and trained <strong>20+ users</strong> across sales, operations, and finance
+              on Power BI, DAX fundamentals, and data literacy best practices.
+            </li>
+            <li>
+              Led cross-functional analytics projects in close partnership with commercial directors,
+              regional managers, and the SAP team to translate business questions into analytical solutions.
+            </li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="cv-footer">
-        <div class="container">
-            <p class="mono-text">cv_version: 2.0.0 | Last Updated: January 2026 | © 2026 Ahmed Gomaa | "Without data,
-                you're just another person with an opinion."</p>
+        <!-- Role 2 -->
+        <div class="cv-exp-item">
+          <div class="cv-exp-top">
+            <div class="cv-exp-role">Sales Analyst</div>
+            <div class="cv-exp-period">2015 – 2020</div>
+          </div>
+          <div class="cv-exp-company">
+            Jazeera Paints <span>· Riyadh, Saudi Arabia</span>
+          </div>
+          <ul class="cv-exp-bullets">
+            <li>
+              Built the foundational <strong>sales reporting suite</strong> used by the commercial team —
+              replacing fragmented manual Excel files with structured, repeatable reports on revenue,
+              targets, product mix, and agent performance.
+            </li>
+            <li>
+              Developed <strong>Python automation scripts</strong> (Pandas) that reduced weekly
+              data preparation from 8 hours to under 1 hour, freeing analyst capacity for
+              higher-value work.
+            </li>
+            <li>
+              Supported the <strong>SAP CX implementation</strong>: led data migration validation,
+              cleansing, field mapping, and UAT — ensuring clean master data at go-live.
+            </li>
+            <li>
+              Constructed <strong>Excel Power Pivot models</strong> for pricing and discount policy
+              analysis, providing commercial managers with margin visibility and discount audit capability.
+            </li>
+            <li>
+              Conducted systematic <strong>data quality audits</strong> across SAP SD transaction
+              data, identifying and resolving master data gaps that affected reporting accuracy.
+            </li>
+            <li>
+              Compiled and presented <strong>actionable trend analysis</strong> to management,
+              covering sales productivity, seasonal patterns, and regional performance variance.
+            </li>
+          </ul>
         </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+        <!-- Role 3 -->
+        <div class="cv-exp-item">
+          <div class="cv-exp-top">
+            <div class="cv-exp-role">Project Coordinator</div>
+            <div class="cv-exp-period">2010 – 2015</div>
+          </div>
+          <div class="cv-exp-company">
+            Jazeera Paints <span>· Riyadh, Saudi Arabia</span>
+          </div>
+          <ul class="cv-exp-bullets">
+            <li>
+              Coordinated cross-functional project teams across sales, operations, and supply chain,
+              ensuring deliverables, timelines, and stakeholder communications were managed effectively.
+            </li>
+            <li>
+              Established <strong>Excel-based reporting templates</strong> and tracking systems for
+              project milestones, budgets, and KPIs — the foundation of the later analytics function.
+            </li>
+            <li>
+              Assisted with <strong>ERP data collection and validation</strong> for management
+              review cycles, building early data-handling skills and cross-department relationships.
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /cv-exp-list -->
+
+      <!-- PROJECTS ─────────────────────────── -->
+      <h2 class="cv-sec-title">Selected Projects</h2>
+
+      <div class="cv-proj-list">
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-top">
+            <div class="cv-proj-name">Sales Performance Command Center</div>
+            <div class="cv-proj-impact">↑ 40% Efficiency</div>
+          </div>
+          <p class="cv-proj-desc">
+            Multi-layer Power BI dashboard suite built on SAP SD + SQL Server data.
+            Covers YTD vs. target, regional heatmaps, agent scorecards, product mix,
+            and discount analysis — with RLS for 15+ regional managers.
+          </p>
+          <div class="cv-proj-tags">
+            <span class="cv-proj-tag">Power BI</span>
+            <span class="cv-proj-tag">DAX</span>
+            <span class="cv-proj-tag">SQL Server</span>
+            <span class="cv-proj-tag">SAP SD</span>
+            <span class="cv-proj-tag">RLS</span>
+          </div>
+        </div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-top">
+            <div class="cv-proj-name">SQL Reporting Automation &amp; Data Quality Pipeline</div>
+            <div class="cv-proj-impact">60h/month Saved</div>
+          </div>
+          <p class="cv-proj-desc">
+            T-SQL stored procedures and SQL Agent jobs replacing 60+ hours of monthly manual
+            data processing. Includes automated quality checks with exception reporting before
+            data reaches any downstream dashboard.
+          </p>
+          <div class="cv-proj-tags">
+            <span class="cv-proj-tag">SQL Server</span>
+            <span class="cv-proj-tag">T-SQL</span>
+            <span class="cv-proj-tag">SQL Agent</span>
+            <span class="cv-proj-tag">ETL Automation</span>
+          </div>
+        </div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-top">
+            <div class="cv-proj-name">Agent &amp; Showroom Performance Tracker</div>
+            <div class="cv-proj-impact">8h/week Saved</div>
+          </div>
+          <p class="cv-proj-desc">
+            Power BI scorecard with dynamic rankings, performance tiers, and RLS — used
+            by 15+ regional managers on Power BI Service for independent, self-service
+            access to agent performance data.
+          </p>
+          <div class="cv-proj-tags">
+            <span class="cv-proj-tag">Power BI</span>
+            <span class="cv-proj-tag">DAX</span>
+            <span class="cv-proj-tag">Row-Level Security</span>
+            <span class="cv-proj-tag">Power BI Service</span>
+          </div>
+        </div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-top">
+            <div class="cv-proj-name">Automated Market Price Intelligence Monitor</div>
+            <div class="cv-proj-impact">Competitive Intelligence</div>
+          </div>
+          <p class="cv-proj-desc">
+            Python tool (BeautifulSoup + Pandas) scraping competitor pricing from market
+            sources weekly, consolidating into structured Excel reports to inform pricing
+            strategy and promotional timing decisions.
+          </p>
+          <div class="cv-proj-tags">
+            <span class="cv-proj-tag">Python</span>
+            <span class="cv-proj-tag">Pandas</span>
+            <span class="cv-proj-tag">BeautifulSoup</span>
+            <span class="cv-proj-tag">Excel</span>
+          </div>
+        </div>
+
+      </div><!-- /cv-proj-list -->
+
+    </main><!-- /cv-main -->
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="cv-aside">
+
+      <!-- Availability -->
+      <div class="cv-aside-section">
+        <div class="cv-availability">
+          <div class="cv-avail-dot"></div>
+          Open to BI Consulting &amp; New Opportunities
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="cv-aside-section">
+        <h2 class="cv-sec-title">Skills</h2>
+
+        <div class="cv-skill-group">
+          <div class="cv-skill-group-name">BI &amp; Visualization</div>
+          <div class="cv-skill-tags">
+            <span class="cv-skill-tag">Power BI</span>
+            <span class="cv-skill-tag">DAX</span>
+            <span class="cv-skill-tag">Power Query (M)</span>
+            <span class="cv-skill-tag">Data Modeling</span>
+            <span class="cv-skill-tag">RLS</span>
+            <span class="cv-skill-tag">Incremental Refresh</span>
+          </div>
+        </div>
+
+        <div class="cv-skill-group">
+          <div class="cv-skill-group-name">Data &amp; SQL</div>
+          <div class="cv-skill-tags">
+            <span class="cv-skill-tag">SQL Server</span>
+            <span class="cv-skill-tag">T-SQL</span>
+            <span class="cv-skill-tag">Stored Procedures</span>
+            <span class="cv-skill-tag">ETL Pipelines</span>
+            <span class="cv-skill-tag">Data Quality</span>
+            <span class="cv-skill-tag">Star Schema</span>
+          </div>
+        </div>
+
+        <div class="cv-skill-group">
+          <div class="cv-skill-group-name">Business Analytics</div>
+          <div class="cv-skill-tags">
+            <span class="cv-skill-tag">Sales Analytics</span>
+            <span class="cv-skill-tag">KPI Design</span>
+            <span class="cv-skill-tag">Pricing Analysis</span>
+            <span class="cv-skill-tag">Forecasting</span>
+            <span class="cv-skill-tag">Agent Scorecards</span>
+          </div>
+        </div>
+
+        <div class="cv-skill-group">
+          <div class="cv-skill-group-name">SAP &amp; Enterprise</div>
+          <div class="cv-skill-tags">
+            <span class="cv-skill-tag">SAP SD</span>
+            <span class="cv-skill-tag">SAP CX / C4C</span>
+            <span class="cv-skill-tag">SAP Analytics Cloud</span>
+            <span class="cv-skill-tag">Data Migration</span>
+          </div>
+        </div>
+
+        <div class="cv-skill-group">
+          <div class="cv-skill-group-name">Tools &amp; Automation</div>
+          <div class="cv-skill-tags">
+            <span class="cv-skill-tag">Python</span>
+            <span class="cv-skill-tag">Pandas</span>
+            <span class="cv-skill-tag">Excel (Advanced)</span>
+            <span class="cv-skill-tag">Power Pivot</span>
+            <span class="cv-skill-tag">VBA</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="cv-aside-section">
+        <h2 class="cv-sec-title">Certifications</h2>
+        <div class="cv-cert-list">
+
+          <div class="cv-cert-item">
+            <div class="cv-cert-icon ms"><i class="fab fa-microsoft"></i></div>
+            <div>
+              <div class="cv-cert-name">Microsoft Power BI Data Analyst Associate</div>
+              <div class="cv-cert-issuer">PL-300 · Microsoft</div>
+            </div>
+          </div>
+
+          <div class="cv-cert-item">
+            <div class="cv-cert-icon goo"><i class="fab fa-google"></i></div>
+            <div>
+              <div class="cv-cert-name">Google Data Analytics Professional Certificate</div>
+              <div class="cv-cert-issuer">Google · Coursera</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="cv-aside-section">
+        <h2 class="cv-sec-title">Education</h2>
+
+        <div class="cv-edu-item">
+          <div class="cv-edu-degree">Bachelor of Science</div>
+          <div class="cv-edu-school">Faculty of Science · Alexandria University</div>
+          <div class="cv-edu-meta">Alexandria, Egypt</div>
+        </div>
+
+      </div>
+
+      <!-- Languages -->
+      <div class="cv-aside-section">
+        <h2 class="cv-sec-title">Languages</h2>
+        <div class="cv-lang-list">
+          <div class="cv-lang-item">
+            <span class="cv-lang-name">Arabic</span>
+            <span class="cv-lang-level">Native</span>
+          </div>
+          <div class="cv-lang-item">
+            <span class="cv-lang-name">English</span>
+            <span class="cv-lang-level">Professional</span>
+          </div>
+        </div>
+      </div>
+
+    </aside><!-- /cv-aside -->
+
+  </div><!-- /cv-body -->
+
+  <!-- ── CV Footer ── -->
+  <div class="cv-footer-bar">
+    <p>Ahmed Gomaa · CV v3.0 · Updated May 2026</p>
+    <p>"Without data, you're just another person with an opinion."</p>
+  </div>
+
+</article>
+</div><!-- /cv-page -->
+
+
+<!-- ── Scripts ── -->
+<script>
+  function downloadCV() {
+    const btn = document.getElementById('downloadBtn');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing…';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      window.print();
+      btn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+      btn.disabled = false;
+    }, 400);
+  }
+
+  /* When opened by main site's "Download CV" button, auto-trigger print */
+  if (window.opener) {
+    window.addEventListener('load', () => {
+      setTimeout(() => window.print(), 600);
+    });
+  }
+</script>
+
 </body>
-
 </html>
