@@ -496,11 +496,12 @@
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing…';
     btn.disabled = true;
 
-    setTimeout(() => {
+    const ready = document.fonts ? document.fonts.ready : Promise.resolve();
+    ready.then(() => {
       window.print();
       btn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
       btn.disabled = false;
-    }, 400);
+    });
   }
 
   /* When opened by main site's "Download CV" button, auto-trigger print */

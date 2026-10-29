@@ -660,8 +660,7 @@ ul { list-style: none; padding: 0; }
     font-size: 13px;
   }
 
-  .cv-topbar,
-  .cv-footer-bar { display: none !important; }
+  .cv-topbar { display: none !important; }
 
   .cv-page {
     padding: 0;
@@ -671,6 +670,13 @@ ul { list-style: none; padding: 0; }
   .cv-doc {
     box-shadow: none;
     border-radius: 0;
+    overflow: visible;
+  }
+
+  /* Keep the on-screen colors, backgrounds and gradients in browser PDFs. */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .cv-header { padding: 1.5rem 2rem; }
@@ -685,8 +691,8 @@ ul { list-style: none; padding: 0; }
   .cv-exp-item:hover { border-left-color: var(--cv-slate-200); }
   .cv-proj-item:hover { box-shadow: none; }
 
-  /* Force blue to print legibly */
-  .cv-blue-light { color: #1d4ed8 !important; }
+  .cv-header, .cv-summary-bar, .cv-kpi-strip, .cv-footer-bar { break-inside: avoid; }
+  .cv-sec-title { break-after: avoid; }
 }
 
 /* =============================================
@@ -711,4 +717,19 @@ ul { list-style: none; padding: 0; }
   .cv-photo-wrap  { width: 72px; height: 72px; }
   .cv-full-name   { font-size: 1.6rem; }
   .cv-page        { padding: 70px 1rem 2rem; }
+}
+
+/* Print may use a narrow viewport: retain the desktop CV, including contacts. */
+@media print {
+  .cv-header-grid { grid-template-columns: auto 1fr auto; gap: 1.2rem; }
+  .cv-contact-col { display: flex; }
+  .cv-body { grid-template-columns: minmax(0, 1fr) 230px; }
+  .cv-main { border-right: 1px solid var(--cv-slate-200); }
+  .cv-aside { border-top: 0; }
+  .cv-photo-wrap { width: 90px; height: 90px; }
+  .cv-full-name { font-size: 2rem; }
+  .cv-page { padding: 0; }
+  .cv-kpi-strip { flex-wrap: nowrap; }
+  .cv-kpi-item { flex: 1; border-bottom: 0; }
+  .cv-footer-bar { padding: 1rem 2rem; }
 }
