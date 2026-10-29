@@ -155,9 +155,9 @@ ul { list-style: none; padding: 0; }
 
 /* Photo */
 .cv-photo-wrap {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 150px;
+  height: 190px;
+  border-radius: 8px;
   padding: 3px;
   background: var(--grad-blue);
   flex-shrink: 0;
@@ -168,7 +168,7 @@ ul { list-style: none; padding: 0; }
   height: 100%;
   object-fit: cover;
   object-position: top;
-  border-radius: 50%;
+  border-radius: 5px;
   border: 2px solid #0e2040;
   display: block;
 }
@@ -714,20 +714,20 @@ ul { list-style: none; padding: 0; }
 @media (max-width: 540px) {
   .cv-topbar { padding: 0 1rem; }
   .cv-header-grid { grid-template-columns: 1fr; }
-  .cv-photo-wrap  { width: 72px; height: 72px; }
+  .cv-photo-wrap  { width: 120px; height: 150px; }
   .cv-full-name   { font-size: 1.6rem; }
   .cv-page        { padding: 70px 1rem 2rem; }
 }
 
 /* Print may use a narrow viewport: retain the desktop CV, including contacts. */
 @media print {
-  .cv-header-grid { grid-template-columns: auto 1fr auto; gap: 1.2rem; }
+  .cv-header-grid { grid-template-columns: auto 1fr auto; gap: .8rem; }
   .cv-contact-col { display: flex; }
   .cv-body { display: block; }
   .cv-main { border-right: 0; }
   .cv-aside { border-top: 1px solid var(--cv-slate-200); }
-  .cv-photo-wrap { width: 90px; height: 90px; }
-  .cv-full-name { font-size: 2rem; }
+  .cv-photo-wrap { width: 130px; height: 165px; }
+  .cv-full-name { font-size: 1.55rem; }
   .cv-page { padding: 0; }
   .cv-kpi-strip { flex-wrap: nowrap; }
   .cv-kpi-item { flex: 1; border-bottom: 0; }
