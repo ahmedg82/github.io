@@ -723,13 +723,19 @@ ul { list-style: none; padding: 0; }
 @media print {
   .cv-header-grid { grid-template-columns: auto 1fr auto; gap: 1.2rem; }
   .cv-contact-col { display: flex; }
-  .cv-body { grid-template-columns: minmax(0, 1fr) 230px; }
-  .cv-main { border-right: 1px solid var(--cv-slate-200); }
-  .cv-aside { border-top: 0; }
+  .cv-body { display: block; }
+  .cv-main { border-right: 0; }
+  .cv-aside { border-top: 1px solid var(--cv-slate-200); }
   .cv-photo-wrap { width: 90px; height: 90px; }
   .cv-full-name { font-size: 2rem; }
   .cv-page { padding: 0; }
   .cv-kpi-strip { flex-wrap: nowrap; }
   .cv-kpi-item { flex: 1; border-bottom: 0; }
   .cv-footer-bar { padding: 1rem 2rem; }
+  .cv-exp-list, .cv-proj-list { display: block; }
+  .cv-exp-item, .cv-proj-item { margin-bottom: 1.25rem; }
+  .cv-exp-item { break-inside: auto; }
+  .cv-exp-bullets { display: block; }
+  .cv-exp-bullets li { break-inside: avoid; margin-bottom: .4rem; }
+  .cv-footer-bar { display: none; }
 }

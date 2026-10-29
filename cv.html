@@ -29,9 +29,9 @@
     <a href="index.html#portfolio" class="cv-btn cv-btn-outline">
       <i class="fas fa-th-large"></i> Projects
     </a>
-    <button class="cv-btn cv-btn-primary" onclick="downloadCV()" id="downloadBtn">
+    <a class="cv-btn cv-btn-primary" href="Ahmed-Gomaa-CV.pdf" download>
       <i class="fas fa-download"></i> Download PDF
-    </button>
+    </a>
   </div>
 </div>
 
@@ -488,29 +488,6 @@
 </article>
 </div><!-- /cv-page -->
 
-
-<!-- ── Scripts ── -->
-<script>
-  function downloadCV() {
-    const btn = document.getElementById('downloadBtn');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing…';
-    btn.disabled = true;
-
-    const ready = document.fonts ? document.fonts.ready : Promise.resolve();
-    ready.then(() => {
-      window.print();
-      btn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
-      btn.disabled = false;
-    });
-  }
-
-  /* When opened by main site's "Download CV" button, auto-trigger print */
-  if (window.opener) {
-    window.addEventListener('load', () => {
-      setTimeout(() => window.print(), 600);
-    });
-  }
-</script>
 
 </body>
 </html>
